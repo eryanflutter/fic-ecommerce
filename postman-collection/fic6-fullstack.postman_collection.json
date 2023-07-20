@@ -1,0 +1,2722 @@
+{
+	"info": {
+		"_postman_id": "113ca033-71ea-43cb-ae45-b483ac81b593",
+		"name": "fic6-fullstack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17803497"
+	},
+	"item": [
+		{
+			"name": "api register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"eryan wardhana\",\r\n    \"password\": \"123456\",\r\n    \"email\":\"eryan.flutter@gmail.com\",\r\n    \"username\": \"eryan\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/auth/local/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"auth",
+						"local",
+						"register"
+					]
+				},
+				"description": "Auth register"
+			},
+			"response": [
+				{
+					"name": "http://localhost:1337/api/auth/local/register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/auth/local/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"auth",
+								"local",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "10"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "9"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1689551137"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "346"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 16 Jul 2023 23:44:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTUxMDc2LCJleHAiOjE2OTIxNDMwNzZ9.VCUu7cH4MbXYGY2gHkBXNmbGU6LRF5VxKR5qxJfhAts\",\n    \"user\": {\n        \"id\": 1,\n        \"username\": \"eryan\",\n        \"email\": \"eryan.flutter@gmail.com\",\n        \"provider\": \"local\",\n        \"confirmed\": true,\n        \"blocked\": false,\n        \"createdAt\": \"2023-07-16T23:44:36.590Z\",\n        \"updatedAt\": \"2023-07-16T23:44:36.590Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identifier\":\"eryan.flutter@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/auth/local",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"auth",
+						"local"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:1337/api/auth/local",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identifier\":\"eryan.flutter@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/auth/local",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"auth",
+								"local"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "10"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "9"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1689551542"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "346"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 16 Jul 2023 23:51:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTUxNDgxLCJleHAiOjE2OTIxNDM0ODF9.LNBhw7NYR-OP03Gf_NazUiz0RLQVboT8J8UmZ6sxjn4\",\n    \"user\": {\n        \"id\": 1,\n        \"username\": \"eryan\",\n        \"email\": \"eryan.flutter@gmail.com\",\n        \"provider\": \"local\",\n        \"confirmed\": true,\n        \"blocked\": false,\n        \"createdAt\": \"2023-07-16T23:44:36.590Z\",\n        \"updatedAt\": \"2023-07-16T23:44:36.590Z\"\n    }\n}"
+				},
+				{
+					"name": "http://localhost:1337/api/auth/local - Jika Error 404",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identifier\":\"eryan.flutterserror@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/auth/local",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"auth",
+								"local"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "10"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "8"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1689552089"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "117"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 00:01:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": null,\n    \"error\": {\n        \"status\": 400,\n        \"name\": \"ValidationError\",\n        \"message\": \"Invalid identifier or password\",\n        \"details\": {}\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api get all product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:1337/api/products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "412"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 00:18:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"attributes\": {\n                \"name\": \"Gitar Akustik\",\n                \"description\": \"Gitar Akustik dengan suara yang indah update terkini\",\n                \"quantity\": 1000,\n                \"price\": 700000,\n                \"inStock\": true,\n                \"image\": \"gitar1.jpg\",\n                \"distributor\": \"Yamaha Musik\",\n                \"createdAt\": \"2023-07-17T00:18:21.369Z\",\n                \"updatedAt\": \"2023-07-17T00:18:48.264Z\",\n                \"publishedAt\": \"2023-07-17T00:18:48.258Z\"\n            }\n        }\n    ],\n    \"meta\": {\n        \"pagination\": {\n            \"page\": 1,\n            \"pageSize\": 25,\n            \"pageCount\": 1,\n            \"total\": 1\n        }\n    }\n}"
+				},
+				{
+					"name": "http://localhost:1337/api/products -API Get All Product",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "412"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 17:15:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"attributes\": {\n                \"name\": \"Gitar Akustik\",\n                \"description\": \"Gitar Akustik dengan suara yang indah update terkini\",\n                \"quantity\": 1000,\n                \"price\": 700000,\n                \"inStock\": true,\n                \"image\": \"gitar1.jpg\",\n                \"distributor\": \"Yamaha Musik\",\n                \"createdAt\": \"2023-07-18T17:15:23.788Z\",\n                \"updatedAt\": \"2023-07-18T17:15:26.498Z\",\n                \"publishedAt\": \"2023-07-18T17:15:26.495Z\"\n            }\n        }\n    ],\n    \"meta\": {\n        \"pagination\": {\n            \"page\": 1,\n            \"pageSize\": 25,\n            \"pageCount\": 1,\n            \"total\": 1\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:1337/api/products/1 - Get Product by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/api/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "349"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 00:21:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"attributes\": {\n            \"name\": \"Gitar Akustik\",\n            \"description\": \"Gitar Akustik dengan suara yang indah update terkini\",\n            \"quantity\": 1000,\n            \"price\": 700000,\n            \"inStock\": true,\n            \"image\": \"gitar1.jpg\",\n            \"distributor\": \"Yamaha Musik\",\n            \"createdAt\": \"2023-07-17T00:18:21.369Z\",\n            \"updatedAt\": \"2023-07-17T00:18:48.264Z\",\n            \"publishedAt\": \"2023-07-17T00:18:48.258Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "api create product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NzAwMjI4LCJleHAiOjE2OTIyOTIyMjh9.94PJM4v5k69a7ArNkDKWCx09pFw_TePyKVi0nQ916fs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n            \"name\": \"Gitar Gibson 3\",\r\n            \"description\": \"Gitar Gibson dengan suara yang indah update terkini\",\r\n            \"quantity\": 700,\r\n            \"price\": 1000000,\r\n            \"inStock\": true,\r\n            \"image\": \"gitar2.jpg\",\r\n            \"distributor\": \"Yamaha Musik\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:1337/api/products-post insert data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTUxNDgxLCJleHAiOjE2OTIxNDM0ODF9.LNBhw7NYR-OP03Gf_NazUiz0RLQVboT8J8UmZ6sxjn4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n            \"name\": \"Gitar Gibson\",\r\n            \"description\": \"Gitar Gibson dengan suara yang indah update terkini\",\r\n            \"quantity\": 700,\r\n            \"price\": 1000000,\r\n            \"inStock\": true,\r\n            \"image\": \"gitar2.jpg\",\r\n            \"distributor\": \"Yamaha Musik\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "347"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 00:41:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"attributes\": {\n            \"name\": \"Gitar Gibson\",\n            \"description\": \"Gitar Gibson dengan suara yang indah update terkini\",\n            \"quantity\": 700,\n            \"price\": 1000000,\n            \"inStock\": true,\n            \"image\": \"gitar2.jpg\",\n            \"distributor\": \"Yamaha Musik\",\n            \"createdAt\": \"2023-07-17T00:41:44.520Z\",\n            \"updatedAt\": \"2023-07-17T00:41:44.520Z\",\n            \"publishedAt\": \"2023-07-17T00:41:44.519Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "api update product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NzAwMjI4LCJleHAiOjE2OTIyOTIyMjh9.94PJM4v5k69a7ArNkDKWCx09pFw_TePyKVi0nQ916fs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n            \"name\": \"Gitar Gibson 2\",\r\n            \"description\": \"Gitar Gibson dengan suara yang indah update terkini\",\r\n            \"quantity\": 800,\r\n            \"price\": 1200000,\r\n            \"inStock\": true,\r\n            \"image\": \"gitar2-revisi.jpg\",\r\n            \"distributor\": \"Yamaha Musik\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:1337/api/products/2 - update",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTUxNDgxLCJleHAiOjE2OTIxNDM0ODF9.LNBhw7NYR-OP03Gf_NazUiz0RLQVboT8J8UmZ6sxjn4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n            \"name\": \"Gitar Gibson 2\",\r\n            \"description\": \"Gitar Gibson dengan suara yang indah update terkini\",\r\n            \"quantity\": 800,\r\n            \"price\": 1200000,\r\n            \"inStock\": true,\r\n            \"image\": \"gitar2-revisi.jpg\",\r\n            \"distributor\": \"Yamaha Musik\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/products/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "356"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 00:55:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"attributes\": {\n            \"name\": \"Gitar Gibson 2\",\n            \"description\": \"Gitar Gibson dengan suara yang indah update terkini\",\n            \"quantity\": 800,\n            \"price\": 1200000,\n            \"inStock\": true,\n            \"image\": \"gitar2-revisi.jpg\",\n            \"distributor\": \"Yamaha Musik\",\n            \"createdAt\": \"2023-07-17T00:41:44.520Z\",\n            \"updatedAt\": \"2023-07-17T00:55:08.837Z\",\n            \"publishedAt\": \"2023-07-17T00:41:44.519Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "api delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer {{jwtToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1337/api/products/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:1337/api/products-delete product",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1337/api/products/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "349"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 01:20:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"attributes\": {\n            \"name\": \"Gitar Gibson 3\",\n            \"description\": \"Gitar Gibson dengan suara yang indah update terkini\",\n            \"quantity\": 700,\n            \"price\": 1000000,\n            \"inStock\": true,\n            \"image\": \"gitar2.jpg\",\n            \"distributor\": \"Yamaha Musik\",\n            \"createdAt\": \"2023-07-17T01:20:28.886Z\",\n            \"updatedAt\": \"2023-07-17T01:20:28.886Z\",\n            \"publishedAt\": \"2023-07-17T01:20:28.884Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "api upload gambar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NzAwMjI4LCJleHAiOjE2OTIyOTIyMjh9.94PJM4v5k69a7ArNkDKWCx09pFw_TePyKVi0nQ916fs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n            \"name\": \"Gitar Gibson 3\",\r\n            \"description\": \"Gitar Gibson dengan suara yang indah update terkini\",\r\n            \"quantity\": 700,\r\n            \"price\": 1000000,\r\n            \"inStock\": true,\r\n            \"image\": \"gitar2.jpg\",\r\n            \"distributor\": \"Yamaha Musik\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:1337/api/products-post insert data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTUxNDgxLCJleHAiOjE2OTIxNDM0ODF9.LNBhw7NYR-OP03Gf_NazUiz0RLQVboT8J8UmZ6sxjn4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n            \"name\": \"Gitar Gibson\",\r\n            \"description\": \"Gitar Gibson dengan suara yang indah update terkini\",\r\n            \"quantity\": 700,\r\n            \"price\": 1000000,\r\n            \"inStock\": true,\r\n            \"image\": \"gitar2.jpg\",\r\n            \"distributor\": \"Yamaha Musik\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "347"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 00:41:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"attributes\": {\n            \"name\": \"Gitar Gibson\",\n            \"description\": \"Gitar Gibson dengan suara yang indah update terkini\",\n            \"quantity\": 700,\n            \"price\": 1000000,\n            \"inStock\": true,\n            \"image\": \"gitar2.jpg\",\n            \"distributor\": \"Yamaha Musik\",\n            \"createdAt\": \"2023-07-17T00:41:44.520Z\",\n            \"updatedAt\": \"2023-07-17T00:41:44.520Z\",\n            \"publishedAt\": \"2023-07-17T00:41:44.519Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "API Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Miyako\",\r\n               \"price\": 300000,\r\n               \"qty\":2  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Philips\",\r\n               \"price\": 500000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":119000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R120 no 89, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:1337/api/orders -post order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Sapu Ijuk\",\r\n               \"price\": 20000,\r\n               \"qty\":2  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Sapu Lidi\",\r\n               \"price\": 10000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":39000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R12 no 77, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "480"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 14:34:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"attributes\": {\n            \"items\": [\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Kipas Angin Miyako\",\n                    \"price\": 200000,\n                    \"qty\": 1\n                },\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Kipas Angin Philips\",\n                    \"price\": 500000,\n                    \"qty\": 1\n                }\n            ],\n            \"totalPrice\": 709000,\n            \"deliveryAddress\": \"Jalan Mangga blok R122 no 77, pejuang, Bekasi Utara, Jawa Barat\",\n            \"CourierName\": null,\n            \"shippingCost\": 9000,\n            \"createdAt\": \"2023-07-18T14:34:03.419Z\",\n            \"updatedAt\": \"2023-07-18T14:34:03.419Z\",\n            \"publishedAt\": \"2023-07-18T14:34:03.418Z\",\n            \"statusOrder\": \"waitingPayment\"\n        }\n    },\n    \"meta\": {}\n}"
+				},
+				{
+					"name": "http://localhost:1337/api/orders -post order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Miyako\",\r\n               \"price\": 200000,\r\n               \"qty\":1  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Philips\",\r\n               \"price\": 500000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":709000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R122 no 77, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "480"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 14:34:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"attributes\": {\n            \"items\": [\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Kipas Angin Miyako\",\n                    \"price\": 200000,\n                    \"qty\": 1\n                },\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Kipas Angin Philips\",\n                    \"price\": 500000,\n                    \"qty\": 1\n                }\n            ],\n            \"totalPrice\": 709000,\n            \"deliveryAddress\": \"Jalan Mangga blok R122 no 77, pejuang, Bekasi Utara, Jawa Barat\",\n            \"CourierName\": null,\n            \"shippingCost\": 9000,\n            \"createdAt\": \"2023-07-18T14:34:03.419Z\",\n            \"updatedAt\": \"2023-07-18T14:34:03.419Z\",\n            \"publishedAt\": \"2023-07-18T14:34:03.418Z\",\n            \"statusOrder\": \"waitingPayment\"\n        }\n    },\n    \"meta\": {}\n}"
+				},
+				{
+					"name": "http://localhost:1337/api/orders -post order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Miyako\",\r\n               \"price\": 200000,\r\n               \"qty\":1  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Philips\",\r\n               \"price\": 500000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":709000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R120 no 77, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "481"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 17:36:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"attributes\": {\n            \"items\": [\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Kipas Angin Miyako\",\n                    \"price\": 200000,\n                    \"qty\": 1\n                },\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Kipas Angin Philips\",\n                    \"price\": 500000,\n                    \"qty\": 1\n                }\n            ],\n            \"totalPrice\": 709000,\n            \"deliveryAddress\": \"Jalan Mangga blok R120 no 77, pejuang, Bekasi Utara, Jawa Barat\",\n            \"courierName\": \"JNE\",\n            \"shippingCost\": 9000,\n            \"statusOrder\": \"waitingPayment\",\n            \"createdAt\": \"2023-07-18T17:36:53.472Z\",\n            \"updatedAt\": \"2023-07-18T17:36:53.472Z\",\n            \"publishedAt\": \"2023-07-18T17:36:53.469Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				},
+				{
+					"name": "http://localhost:1337/api/orders -post order-sapu",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Sapu Ijuk\",\r\n               \"price\": 20000,\r\n               \"qty\":2  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Sapu Lidi\",\r\n               \"price\": 10000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":39000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R12 no 77, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "458"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 17:41:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"attributes\": {\n            \"items\": [\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Sapu Ijuk\",\n                    \"price\": 20000,\n                    \"qty\": 2\n                },\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Sapu Lidi\",\n                    \"price\": 10000,\n                    \"qty\": 1\n                }\n            ],\n            \"totalPrice\": 39000,\n            \"deliveryAddress\": \"Jalan Mangga blok R12 no 77, pejuang, Bekasi Utara, Jawa Barat\",\n            \"courierName\": \"JNE\",\n            \"shippingCost\": 9000,\n            \"statusOrder\": \"waitingPayment\",\n            \"createdAt\": \"2023-07-18T17:41:25.134Z\",\n            \"updatedAt\": \"2023-07-18T17:41:25.134Z\",\n            \"publishedAt\": \"2023-07-18T17:41:25.133Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				},
+				{
+					"name": "http://localhost:1337/api/orders -post order-gopay",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Miyako\",\r\n               \"price\": 200000,\r\n               \"qty\":1  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Philips\",\r\n               \"price\": 500000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":709000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R122 no 77, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "924"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 01:53:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": \"201\",\n    \"status_message\": \"GoPay transaction is created\",\n    \"transaction_id\": \"c4e485d9-9b63-4af6-ba66-689fe277b52a\",\n    \"order_id\": \"5\",\n    \"merchant_id\": \"G500742826\",\n    \"gross_amount\": \"709000.00\",\n    \"currency\": \"IDR\",\n    \"payment_type\": \"gopay\",\n    \"transaction_time\": \"2023-07-19 08:53:41\",\n    \"transaction_status\": \"pending\",\n    \"fraud_status\": \"accept\",\n    \"actions\": [\n        {\n            \"name\": \"generate-qr-code\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/gopay/c4e485d9-9b63-4af6-ba66-689fe277b52a/qr-code\"\n        },\n        {\n            \"name\": \"deeplink-redirect\",\n            \"method\": \"GET\",\n            \"url\": \"https://simulator.sandbox.midtrans.com/gopay/partner/app/payment-pin?id=1b934674-0638-49d0-ad8a-765822dc4978\"\n        },\n        {\n            \"name\": \"get-status\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/c4e485d9-9b63-4af6-ba66-689fe277b52a/status\"\n        },\n        {\n            \"name\": \"cancel\",\n            \"method\": \"POST\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/c4e485d9-9b63-4af6-ba66-689fe277b52a/cancel\"\n        }\n    ],\n    \"expiry_time\": \"2023-07-19 09:08:41\"\n}"
+				},
+				{
+					"name": "http://localhost:1337/api/orders -post order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Miyako\",\r\n               \"price\": 200000,\r\n               \"qty\":1  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Philips\",\r\n               \"price\": 500000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":709000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R120 no 77, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "924"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 02:09:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": \"201\",\n    \"status_message\": \"GoPay transaction is created\",\n    \"transaction_id\": \"28f53f0f-3e29-4bd6-b404-bde22f990de7\",\n    \"order_id\": \"6\",\n    \"merchant_id\": \"G500742826\",\n    \"gross_amount\": \"709000.00\",\n    \"currency\": \"IDR\",\n    \"payment_type\": \"gopay\",\n    \"transaction_time\": \"2023-07-19 09:09:58\",\n    \"transaction_status\": \"pending\",\n    \"fraud_status\": \"accept\",\n    \"actions\": [\n        {\n            \"name\": \"generate-qr-code\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/gopay/28f53f0f-3e29-4bd6-b404-bde22f990de7/qr-code\"\n        },\n        {\n            \"name\": \"deeplink-redirect\",\n            \"method\": \"GET\",\n            \"url\": \"https://simulator.sandbox.midtrans.com/gopay/partner/app/payment-pin?id=372af7ac-e08c-4cf8-863f-00f4786a0540\"\n        },\n        {\n            \"name\": \"get-status\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/28f53f0f-3e29-4bd6-b404-bde22f990de7/status\"\n        },\n        {\n            \"name\": \"cancel\",\n            \"method\": \"POST\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/28f53f0f-3e29-4bd6-b404-bde22f990de7/cancel\"\n        }\n    ],\n    \"expiry_time\": \"2023-07-19 09:24:58\"\n}"
+				},
+				{
+					"name": "http://localhost:1337/api/orders -post order - Core API ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Miyako\",\r\n               \"price\": 200000,\r\n               \"qty\":1  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Philips\",\r\n               \"price\": 500000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":709000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R120 no 77, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "924"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 02:09:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": \"201\",\n    \"status_message\": \"GoPay transaction is created\",\n    \"transaction_id\": \"28f53f0f-3e29-4bd6-b404-bde22f990de7\",\n    \"order_id\": \"6\",\n    \"merchant_id\": \"G500742826\",\n    \"gross_amount\": \"709000.00\",\n    \"currency\": \"IDR\",\n    \"payment_type\": \"gopay\",\n    \"transaction_time\": \"2023-07-19 09:09:58\",\n    \"transaction_status\": \"pending\",\n    \"fraud_status\": \"accept\",\n    \"actions\": [\n        {\n            \"name\": \"generate-qr-code\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/gopay/28f53f0f-3e29-4bd6-b404-bde22f990de7/qr-code\"\n        },\n        {\n            \"name\": \"deeplink-redirect\",\n            \"method\": \"GET\",\n            \"url\": \"https://simulator.sandbox.midtrans.com/gopay/partner/app/payment-pin?id=372af7ac-e08c-4cf8-863f-00f4786a0540\"\n        },\n        {\n            \"name\": \"get-status\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/28f53f0f-3e29-4bd6-b404-bde22f990de7/status\"\n        },\n        {\n            \"name\": \"cancel\",\n            \"method\": \"POST\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/28f53f0f-3e29-4bd6-b404-bde22f990de7/cancel\"\n        }\n    ],\n    \"expiry_time\": \"2023-07-19 09:24:58\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api payment callback",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \r\n        \"history\":{\r\n        \"va_numbers\": [\r\n            {\r\n                \"va_number\": \"42826106386\",\r\n                \"bank\": \"bca\"\r\n            }\r\n        ],\r\n        \"transaction_time\": \"2023-07-20 08:13:39\",\r\n        \"transaction_status\": \"settlement\",\r\n        \"transaction_id\": \"dbb25f81-daf1-477b-9062-31261c053b4c\",\r\n        \"status_message\": \"midtrans payment notification\",\r\n        \"status_code\": \"200\",\r\n        \"signature_key\": \"7da4b271e9c4ac0dd3ca4f71bf4e9c0bc536275cf838d374ccae234624c87513033f624dcb7c1166897f848d7f763e0962bf6ed58326288adda1750ec222f931\",\r\n        \"settlement_time\": \"2023-07-20 08:13:59\",\r\n        \"payment_type\": \"bank_transfer\",\r\n        \"payment_amounts\": [],\r\n        \"order_id\": \"12\",\r\n        \"merchant_id\": \"G500742826\",\r\n        \"gross_amount\": \"1190000.00\",\r\n        \"fraud_status\": \"accept\",\r\n        \"expiry_time\": \"2023-07-21 08:13:32\",\r\n        \"currency\": \"IDR\"\r\n    }\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/paymentcallbacks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"paymentcallbacks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:1337/api/orders -post order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Sapu Ijuk\",\r\n               \"price\": 20000,\r\n               \"qty\":2  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Sapu Lidi\",\r\n               \"price\": 10000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":39000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R12 no 77, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "480"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 14:34:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"attributes\": {\n            \"items\": [\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Kipas Angin Miyako\",\n                    \"price\": 200000,\n                    \"qty\": 1\n                },\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Kipas Angin Philips\",\n                    \"price\": 500000,\n                    \"qty\": 1\n                }\n            ],\n            \"totalPrice\": 709000,\n            \"deliveryAddress\": \"Jalan Mangga blok R122 no 77, pejuang, Bekasi Utara, Jawa Barat\",\n            \"CourierName\": null,\n            \"shippingCost\": 9000,\n            \"createdAt\": \"2023-07-18T14:34:03.419Z\",\n            \"updatedAt\": \"2023-07-18T14:34:03.419Z\",\n            \"publishedAt\": \"2023-07-18T14:34:03.418Z\",\n            \"statusOrder\": \"waitingPayment\"\n        }\n    },\n    \"meta\": {}\n}"
+				},
+				{
+					"name": "http://localhost:1337/api/orders -post order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Miyako\",\r\n               \"price\": 200000,\r\n               \"qty\":1  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Philips\",\r\n               \"price\": 500000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":709000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R122 no 77, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "480"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 14:34:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"attributes\": {\n            \"items\": [\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Kipas Angin Miyako\",\n                    \"price\": 200000,\n                    \"qty\": 1\n                },\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Kipas Angin Philips\",\n                    \"price\": 500000,\n                    \"qty\": 1\n                }\n            ],\n            \"totalPrice\": 709000,\n            \"deliveryAddress\": \"Jalan Mangga blok R122 no 77, pejuang, Bekasi Utara, Jawa Barat\",\n            \"CourierName\": null,\n            \"shippingCost\": 9000,\n            \"createdAt\": \"2023-07-18T14:34:03.419Z\",\n            \"updatedAt\": \"2023-07-18T14:34:03.419Z\",\n            \"publishedAt\": \"2023-07-18T14:34:03.418Z\",\n            \"statusOrder\": \"waitingPayment\"\n        }\n    },\n    \"meta\": {}\n}"
+				},
+				{
+					"name": "http://localhost:1337/api/orders -post order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Miyako\",\r\n               \"price\": 200000,\r\n               \"qty\":1  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Philips\",\r\n               \"price\": 500000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":709000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R120 no 77, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "481"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 17:36:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"attributes\": {\n            \"items\": [\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Kipas Angin Miyako\",\n                    \"price\": 200000,\n                    \"qty\": 1\n                },\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Kipas Angin Philips\",\n                    \"price\": 500000,\n                    \"qty\": 1\n                }\n            ],\n            \"totalPrice\": 709000,\n            \"deliveryAddress\": \"Jalan Mangga blok R120 no 77, pejuang, Bekasi Utara, Jawa Barat\",\n            \"courierName\": \"JNE\",\n            \"shippingCost\": 9000,\n            \"statusOrder\": \"waitingPayment\",\n            \"createdAt\": \"2023-07-18T17:36:53.472Z\",\n            \"updatedAt\": \"2023-07-18T17:36:53.472Z\",\n            \"publishedAt\": \"2023-07-18T17:36:53.469Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				},
+				{
+					"name": "http://localhost:1337/api/orders -post order-sapu",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Sapu Ijuk\",\r\n               \"price\": 20000,\r\n               \"qty\":2  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Sapu Lidi\",\r\n               \"price\": 10000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":39000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R12 no 77, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "458"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 17:41:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"attributes\": {\n            \"items\": [\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Sapu Ijuk\",\n                    \"price\": 20000,\n                    \"qty\": 2\n                },\n                {\n                    \"id\": 1,\n                    \"ProductName\": \"Sapu Lidi\",\n                    \"price\": 10000,\n                    \"qty\": 1\n                }\n            ],\n            \"totalPrice\": 39000,\n            \"deliveryAddress\": \"Jalan Mangga blok R12 no 77, pejuang, Bekasi Utara, Jawa Barat\",\n            \"courierName\": \"JNE\",\n            \"shippingCost\": 9000,\n            \"statusOrder\": \"waitingPayment\",\n            \"createdAt\": \"2023-07-18T17:41:25.134Z\",\n            \"updatedAt\": \"2023-07-18T17:41:25.134Z\",\n            \"publishedAt\": \"2023-07-18T17:41:25.133Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				},
+				{
+					"name": "http://localhost:1337/api/orders -post order-gopay",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Miyako\",\r\n               \"price\": 200000,\r\n               \"qty\":1  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Philips\",\r\n               \"price\": 500000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":709000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R122 no 77, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "924"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 01:53:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": \"201\",\n    \"status_message\": \"GoPay transaction is created\",\n    \"transaction_id\": \"c4e485d9-9b63-4af6-ba66-689fe277b52a\",\n    \"order_id\": \"5\",\n    \"merchant_id\": \"G500742826\",\n    \"gross_amount\": \"709000.00\",\n    \"currency\": \"IDR\",\n    \"payment_type\": \"gopay\",\n    \"transaction_time\": \"2023-07-19 08:53:41\",\n    \"transaction_status\": \"pending\",\n    \"fraud_status\": \"accept\",\n    \"actions\": [\n        {\n            \"name\": \"generate-qr-code\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/gopay/c4e485d9-9b63-4af6-ba66-689fe277b52a/qr-code\"\n        },\n        {\n            \"name\": \"deeplink-redirect\",\n            \"method\": \"GET\",\n            \"url\": \"https://simulator.sandbox.midtrans.com/gopay/partner/app/payment-pin?id=1b934674-0638-49d0-ad8a-765822dc4978\"\n        },\n        {\n            \"name\": \"get-status\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/c4e485d9-9b63-4af6-ba66-689fe277b52a/status\"\n        },\n        {\n            \"name\": \"cancel\",\n            \"method\": \"POST\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/c4e485d9-9b63-4af6-ba66-689fe277b52a/cancel\"\n        }\n    ],\n    \"expiry_time\": \"2023-07-19 09:08:41\"\n}"
+				},
+				{
+					"name": "http://localhost:1337/api/orders -post order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Miyako\",\r\n               \"price\": 200000,\r\n               \"qty\":1  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Philips\",\r\n               \"price\": 500000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":709000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R120 no 77, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "924"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 02:09:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": \"201\",\n    \"status_message\": \"GoPay transaction is created\",\n    \"transaction_id\": \"28f53f0f-3e29-4bd6-b404-bde22f990de7\",\n    \"order_id\": \"6\",\n    \"merchant_id\": \"G500742826\",\n    \"gross_amount\": \"709000.00\",\n    \"currency\": \"IDR\",\n    \"payment_type\": \"gopay\",\n    \"transaction_time\": \"2023-07-19 09:09:58\",\n    \"transaction_status\": \"pending\",\n    \"fraud_status\": \"accept\",\n    \"actions\": [\n        {\n            \"name\": \"generate-qr-code\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/gopay/28f53f0f-3e29-4bd6-b404-bde22f990de7/qr-code\"\n        },\n        {\n            \"name\": \"deeplink-redirect\",\n            \"method\": \"GET\",\n            \"url\": \"https://simulator.sandbox.midtrans.com/gopay/partner/app/payment-pin?id=372af7ac-e08c-4cf8-863f-00f4786a0540\"\n        },\n        {\n            \"name\": \"get-status\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/28f53f0f-3e29-4bd6-b404-bde22f990de7/status\"\n        },\n        {\n            \"name\": \"cancel\",\n            \"method\": \"POST\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/28f53f0f-3e29-4bd6-b404-bde22f990de7/cancel\"\n        }\n    ],\n    \"expiry_time\": \"2023-07-19 09:24:58\"\n}"
+				},
+				{
+					"name": "http://localhost:1337/api/orders -post order - Core API ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n       \"items\":[\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Miyako\",\r\n               \"price\": 200000,\r\n               \"qty\":1  \r\n\r\n           },\r\n           {\r\n               \"id\":1,\r\n               \"ProductName\":\"Kipas Angin Philips\",\r\n               \"price\": 500000,\r\n               \"qty\":1  \r\n\r\n           }\r\n       ],\r\n       \"totalPrice\":709000,\r\n        \"deliveryAddress\":\"Jalan Mangga blok R120 no 77, pejuang, Bekasi Utara, Jawa Barat\",\r\n        \"courierName\":\"JNE\",\r\n        \"shippingCost\":9000,\r\n        \"statusOrder\":\"waitingPayment\"\r\n\r\n\r\n   } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "924"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 02:09:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": \"201\",\n    \"status_message\": \"GoPay transaction is created\",\n    \"transaction_id\": \"28f53f0f-3e29-4bd6-b404-bde22f990de7\",\n    \"order_id\": \"6\",\n    \"merchant_id\": \"G500742826\",\n    \"gross_amount\": \"709000.00\",\n    \"currency\": \"IDR\",\n    \"payment_type\": \"gopay\",\n    \"transaction_time\": \"2023-07-19 09:09:58\",\n    \"transaction_status\": \"pending\",\n    \"fraud_status\": \"accept\",\n    \"actions\": [\n        {\n            \"name\": \"generate-qr-code\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/gopay/28f53f0f-3e29-4bd6-b404-bde22f990de7/qr-code\"\n        },\n        {\n            \"name\": \"deeplink-redirect\",\n            \"method\": \"GET\",\n            \"url\": \"https://simulator.sandbox.midtrans.com/gopay/partner/app/payment-pin?id=372af7ac-e08c-4cf8-863f-00f4786a0540\"\n        },\n        {\n            \"name\": \"get-status\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/28f53f0f-3e29-4bd6-b404-bde22f990de7/status\"\n        },\n        {\n            \"name\": \"cancel\",\n            \"method\": \"POST\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/28f53f0f-3e29-4bd6-b404-bde22f990de7/cancel\"\n        }\n    ],\n    \"expiry_time\": \"2023-07-19 09:24:58\"\n}"
+				}
+			]
+		}
+	]
+}
